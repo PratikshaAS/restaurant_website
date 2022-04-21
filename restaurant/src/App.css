@@ -1,0 +1,31 @@
+.heading_img{
+  /* width: 100%; */
+  object-fit: contain;
+
+}
+
+.banner_container{
+  align-items: center;
+  margin: 1rem;
+  /* padding: 0 10%; */
+}
+
+.footer{
+  background-color:#212121;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.handles{
+  color: whitesmoke;
+}
+
+.card_img{
+  object-fit: contain;
+}
+
+.dish_img{
+  object-fit: contain;
+  width: 100%;
+}
