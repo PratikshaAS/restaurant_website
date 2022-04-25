@@ -4,19 +4,22 @@ import Header from './Header';
 import Homepage from './Homepage';
 import Dish from './Dish';
 import Footer from './Footer';
+import About from './About';
+import Contact from './Contact';
 
 const Maincomponent = () => {
   return (
     <div>
     <Header/>
-    <BrowserRouter>
+    
     <Routes>
       <Route path="/" element={< Homepage/>}/>
         {/* <Route index element={<Homepage />} /> */}
         <Route path="/dish" element={<Dish />} />
+        <Route path='/about' element={<About/>}/>
+        <Route path='/contact' element={<Contact/>}/>
       {/* </Route> */}
     </Routes>
-  </BrowserRouter>
   <Footer/>
     </div>
 

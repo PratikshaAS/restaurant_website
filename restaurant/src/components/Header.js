@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import { Navbar, NavbarBrand, NavbarToggler, Collapse, Nav, NavItem, NavLink,  } from 'reactstrap'
+import { useNavigate } from 'react-router-dom';
 const Header = () => {
+  const nav = useNavigate();
     const [navopen, setnavopen] = useState(false);
   return (<div>
     <Navbar
@@ -18,38 +20,15 @@ const Header = () => {
           navbar
         >
           <NavItem>
-            <NavLink href="/components/">
-              Components
+            <NavLink onClick={()=>nav('/about')}>
+              About 
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="https://github.com/reactstrap/reactstrap">
-              GitHub
+            <NavLink onClick={()=>nav('/contact')}>
+              Contact
             </NavLink>
           </NavItem>
-          {/* <UncontrolledDropdown
-            inNavbar
-            nav
-          >
-            <DropdownToggle
-              caret
-              nav
-            >
-              Options
-            </DropdownToggle>
-            <DropdownMenu right>
-              <DropdownItem>
-                Option 1
-              </DropdownItem>
-              <DropdownItem>
-                Option 2
-              </DropdownItem>
-              <DropdownItem divider />
-              <DropdownItem>
-                Reset
-              </DropdownItem>
-            </DropdownMenu>
-          </UncontrolledDropdown> */}
         </Nav>
         {/* <NavbarText>
           Simple Text

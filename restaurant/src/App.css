@@ -1,3 +1,13 @@
+body{
+  background-color: darkgray;
+  /* margin:1rem; */
+}
+
+.about_container{
+  /* color: #027187c9; */
+  text-align: center;
+}
+
 .heading_img{
   /* width: 100%; */
   object-fit: contain;
@@ -17,8 +27,24 @@
   flex-wrap: wrap;
 }
 
+.card_row{
+  gap: 20px;
+    justify-content: space-around;
+    margin:25px;
+}
+
+.dish_card{
+  background-color: darkorange;
+  background-color: #027187c9;
+  border-radius: 10px;
+}
+
 .handles{
   color: whitesmoke;
+  display: flex;
+    flex-direction: column;
+    padding: 2rem;
+
 }
 
 .card_img{
@@ -29,3 +55,58 @@
   object-fit: contain;
   width: 100%;
 }
+
+.dish_container{
+  margin: 3rem;
+}
+
+.about_heading{
+  /* background:maroon; */
+  background: linear-gradient(to right, #093740, #11798d);  height: 300px;
+  margin: 3rem;
+  border-radius: 35px;
+  padding: 9px 24px;
+}
+
+.about_heading p{
+  font-size: 60px;
+  color:white;
+
+}
+
+.about_heading span, .home_txt{
+  color: wheat;
+  font-size: 45px;
+  padding: 3rem;
+}
+
+.about_txt{
+  text-align: center;
+  font-size: 54px;
+}
+
+.about_content{
+  padding: 15px;
+  font-size: 20px;
+}
+
+.opening{
+
+}
+
+.opening p {
+  font-size: 20px;
+}
+
+.form_input{
+  background: transparent;
+  border-color: rgb(111 106 106);
+}
+
+.form-heading{
+  padding-top: 3rem;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+
