@@ -1,38 +1,97 @@
-import React from 'react'
-
+import React,{useState} from 'react'
+import axios from 'axios'
 const Contact = () => {
+    const [user,setUserdata]=useState({name:"",phone:"",email:"",message:""});
+    // const history=useHistory();
+    const handleInputs=(e)=>{
+        console.log(e);
+        let name=e.target.name;
+        let value=e.target.value;
+        setUserdata({...user,[name]:value})
+    }
+
+    const postdata = () =>{
+        let data = {
+            "name":user.name,
+            "phone":user.phone,
+            "email":user.email,
+            "message":user.message,
+        }
+        axios.post('http://localhost:5000/contact', data)
+        .then(res=>{
+            alert("contact added successfully!");
+        })
+        .catch(err=>alert(err));
+    }
+    // const Postdata=async(e)=>{
+    //     console.log("inside postdata",user);
+    //     e.preventDefault();
+        
+    //     console.log("callContactPage");
+    //     const {name,phone,email,message}=user
+    //     try{
+    //         const res=await fetch("localhost:5000/contact",{
+    //             method:"POST",
+    //             headers:{
+    //                 "Content-Type":"application/json"
+    //             },
+    //             body:JSON.stringify({
+    //                 name:name,phone:phone,email:email,message:message
+    //             })
+
+    //         });
+    //         const data=await res.json();
+    //         console.log("data=",data);
+           
+    //         if(data.status===422 || !data) 
+    //         {
+    //             window.alert("invalid registration");
+    //             console.log("Invalid Registration");
+    //             const error=new Error(res.error);
+    //             console.log(error);
+    //             throw error;
+    //         }else{
+    //             window.alert("registration successull");
+    //             console.log("regstration successfull");
+    //             // history.push("/");
+    //         }
+    //     }catch(err){
+    //         console.log(err);
+    //     }
+    // }
+   
   return (
     <div class="main-container">
         <div class="container">
         
         
-            <form name="contactform">
+            <form name="contactform" method="POST" action='\contact' >
                 <h3 class="form-heading" >Contact Us</h3>
                 <br/><hr/>
                 <div class="mb-3">
                     <label for="UserName" class="form-label">Name</label><br/>
-                    <input type="text" name="Name" class="form-control form_input"  />
+                    <input type="text" name="name" value={user.name} onChange={handleInputs} class="form-control form_input"  />
                 
                 </div>
             
                 <div class="mb-3">
                     <label for="PhoneNumber" class="form-label">Phone</label><br/>
-                    <input type="number" name="Phone" class="form-control form_input" />
+                    <input type="number" value={user.phone}  onChange={handleInputs} name="phone" class="form-control form_input" />
                 
                 </div>
                 <div class="mb-3">
                     <label for="EmailId" class="form-label">Email</label><br/>
-                    <input type="email" name="Email" class="form-control form_input"  />
+                    <input type="email" name="email" value={user.email}  onChange={handleInputs} class="form-control form_input"  />
                 
                 </div>
                 <div class="mb-3">
                     <label for="MessageBox" class="form-label">Message</label><br/>
-                    <input type="text" name="Message" class="form-control form_input"  />
+                    <input type="text" name="message" value={user.message}  onChange={handleInputs} class="form-control form_input"  />
                 
                 </div>
                 <br/><hr/>
                 
-                <button type="submit" id="submit" class="btn btn-primary">Submit</button><br/><hr/>
+                <button type="submit" onClick={()=>postdata()} id="submit"  class="btn btn-primary">Submit</button><br/><hr/>
                 
             </form>
             <div className='map'>

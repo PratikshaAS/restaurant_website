@@ -17,6 +17,8 @@ body{
 .banner_container{
   align-items: center;
   margin: 1rem;
+  text-align: center;
+  height: auto;
   /* padding: 0 10%; */
 }
 
@@ -63,21 +65,22 @@ body{
 .about_heading{
   /* background:maroon; */
   background: linear-gradient(to right, #093740, #11798d);  height: 300px;
-  margin: 3rem;
+  margin: 2rem;
   border-radius: 35px;
-  padding: 9px 24px;
+  padding: 2rem;
+  height: auto;
 }
 
 .about_heading p{
-  font-size: 60px;
+  font-size: 50px;
   color:white;
 
 }
 
 .about_heading span, .home_txt{
   color: wheat;
-  font-size: 45px;
-  padding: 3rem;
+  font-size: 25px;
+  padding: 1rem;
 }
 
 .about_txt{
@@ -90,9 +93,9 @@ body{
   font-size: 20px;
 }
 
-.opening{
+/* .opening{
 
-}
+} */
 
 .opening p {
   font-size: 20px;

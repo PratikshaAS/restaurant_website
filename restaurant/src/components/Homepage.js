@@ -44,7 +44,7 @@ const Homepage = () => {
         <CardImgOverlay>
           <CardTitle tag="h5" style={{fontSize:"60px", textAlign:"center"}}>LettuceEat</CardTitle>
           <CardText className="home_txt">
-            "Food is for eating, and good food is to be enjoyed ... I think food is, actually, very beautiful in itself."
+            "Food is for eating, and good food is to be enjoyed... I think food is, actually, very beautiful in itself."
           </CardText>
           {/* <CardText>
             <small className="text-muted">Last updated 3 mins ago</small>

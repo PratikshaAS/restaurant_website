@@ -4,8 +4,8 @@ const About = () => {
   return (
     <div className='about_container'>
         <div className='about_heading'>
-            <p style={{display:"block"}}>Experience the Flavors and Hospitality of India</p>
-            <span>If you are craving real, authentic INdian cuisine, look no further than ...</span>
+            <p>Experience the Flavors and Hospitality of India</p>
+            <span>If you are craving real, authentic Indian cuisine, look no further than ...</span>
         </div>
 
         <h1 className='about_txt'>About Us</h1>
